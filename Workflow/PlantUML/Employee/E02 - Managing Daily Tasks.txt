@@ -1,0 +1,82 @@
+@startuml
+title Managing Daily Tasks
+
+start
+:User selects "Manage Daily Tasks";
+
+if (User selects "View Existing Tasks") then
+  :Application retrieves list of existing daily tasks;
+  :Application displays task details;
+  
+  if (User selects "Create a New Task") then
+    :User enters task details;
+    :Application validates details;
+    
+    if (Details are Valid?) then
+      :Create a new task with entered details;
+      :Add the new task to the task list;
+      :Display confirmation message;
+    else
+      :Display error message;
+      :User can correct details or cancel task creation;
+      
+      if (User chooses to correct details) then
+        :User corrects task details;
+        :Application revalidates details;
+        
+        if (Details are Valid?) then
+          :Create a new task with corrected details;
+          :Add the new task to the task list;
+          :Display confirmation message;
+        else
+          :Display error message;
+          :User can correct details or cancel task creation;
+        endif
+      else
+        :User cancels task creation;
+      endif
+    endif
+  else if (User selects "Edit an Existing Task") then
+    :User selects a task to edit;
+    :Application retrieves and displays task details;
+    :User modifies task details;
+    :Application validates modified details;
+    
+    if (Details are Valid?) then
+      :Update the selected task with modified details;
+      :Update the task in the task list;
+      :Display confirmation message;
+    else
+      :Display error message;
+      :User can correct details or cancel task modification;
+      
+      if (User chooses to correct details) then
+        :User corrects task details;
+        :Application revalidates details;
+        
+        if (Details are Valid?) then
+          :Update the selected task with corrected details;
+          :Update the task in the task list;
+          :Display confirmation message;
+        else
+          :Display error message;
+          :User can correct details or cancel task modification;
+        endif
+      else
+        :User cancels task modification;
+      endif
+    endif
+  else if (User selects "Delete Tasks") then
+    :User selects tasks to delete;
+    :Application removes selected tasks from the task list;
+    :Display confirmation message;
+  else
+    :User selects another option;
+  endif
+else
+  :User selects another option;
+endif
+
+:Application saves changes to the task list;
+stop
+@enduml

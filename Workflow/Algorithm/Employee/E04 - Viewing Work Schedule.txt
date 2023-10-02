@@ -1,0 +1,29 @@
+Melihat Jadwal Kerja : 
+
+1. Pengguna membuka aplikasi Time Master.
+
+2. Pengguna memilih opsi "Melihat Jadwal Kerja."
+
+3. Aplikasi akan mengambil jadwal kerja pengguna dari penyimpanan data.
+
+4. Jika jadwal kerja tersedia, aplikasi akan menampilkan daftar catatan jadwal kerja pengguna. Setiap catatan jadwal kerja memiliki beberapa atribut penting:
+
+   a. Tanggal Kerja: Tanggal ketika pekerjaan dilakukan.
+   
+   b. Waktu Masuk: Waktu ketika pengguna mulai bekerja, dalam format "HH:mm AM/PM."
+   
+   c. Waktu Keluar: Waktu ketika pengguna selesai bekerja, juga dalam format "HH:mm AM/PM."
+   
+   d. Total Jam Kerja: Durasi total waktu kerja dalam format "HH:mm."
+   
+   e. Tugas/Proyek: Nama atau ID tugas atau proyek yang sedang dikerjakan.
+   
+   f. Lokasi: Menunjukkan apakah pekerjaan dilakukan di kantor atau jarak jauh.
+   
+   g. Istirahat yang Diambil: Durasi istirahat yang diambil selama pekerjaan.
+
+5. Pengguna dapat memilih untuk melihat detail lebih lanjut tentang catatan jadwal kerja tertentu dengan mengkliknya. Aplikasi akan menampilkan informasi rinci yang mencakup semua atribut yang disebutkan di atas untuk catatan jadwal kerja yang dipilih.
+
+6. Jika pengguna tidak memiliki jadwal kerja yang tersedia, aplikasi akan memberi tahu pengguna bahwa tidak ada catatan pekerjaan yang dapat ditemukan dalam basis data aplikasi.
+
+7. Selesai

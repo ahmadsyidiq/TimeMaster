@@ -1,0 +1,25 @@
+Task Reminder:
+
+1. Pengguna membuka aplikasi Task Reminder.
+
+2. Jika terdapat tugas-tugas dengan tenggat waktu (deadline), aplikasi secara otomatis memberikan pengingat.
+
+3. Pengguna menerima pemberitahuan tentang tugas-tugas yang harus diselesaikan.
+
+4. Jika terdapat tugas dengan detail seperti Nama Tugas, Deskripsi, Tenggat Waktu (Tanggal dan Waktu), Prioritas (Rendah, Sedang, Tinggi), dan Status (Belum Selesai, Selesai), pengguna dapat:
+
+   - Melihat detail tugas yang tersedia.
+   - Menandai tugas sebagai selesai jika telah selesai.
+   - Menunda tugas dengan mengubah tenggat waktu tugas.
+
+   Langkah-langkah ini diulangi untuk setiap tugas yang tersedia.
+
+5. Jika tidak ada tugas yang memiliki tenggat waktu, pengguna dapat:
+
+   - Menambahkan tugas baru dengan mengatur atribut tugas seperti Nama, Deskripsi, Tenggat Waktu, Prioritas, dan Status.
+   - Menghapus tugas yang tidak diperlukan dengan memilih tugas yang ingin dihapus.
+   - Mengedit tugas yang sudah ada dengan memilih tugas yang ingin diedit dan mengubah detail tugas tersebut.
+
+6. Aplikasi akan menyimpan perubahan yang dilakukan oleh pengguna pada daftar tugas.
+
+7. Proses selesai.
