@@ -1,0 +1,24 @@
+Persetujuan atau Penolakan Permintaan Cuti:
+
+1. Supervisor memilih "Persetujui atau Tolak Permintaan Cuti."
+2. Aplikasi mengambil daftar permintaan cuti yang diajukan oleh karyawan.
+3. Supervisor dapat memilih permintaan cuti untuk ditinjau.
+4. Jika Supervisor memilih permintaan cuti:
+   - Aplikasi menampilkan informasi rinci tentang permintaan cuti yang dipilih.
+   - Supervisor meninjau detail cuti (seperti tanggal, durasi, dan alasan).
+   - Supervisor dapat melihat riwayat cuti karyawan dan saldo saat ini.
+   - Supervisor dapat berkonsultasi dengan anggota tim atau kebijakan yang relevan.
+5. Jika Supervisor menyetujui permintaan cuti:
+   - Supervisor memberikan komentar atau alasan persetujuan.
+   - Aplikasi mencatat keputusan persetujuan dan komentar.
+   - Aplikasi mengkomunikasikan persetujuan kepada karyawan yang bersangkutan.
+   - Karyawan diberitahu bahwa permintaan cuti telah disetujui.
+   - Cuti dikurangkan dari saldo cuti karyawan.
+6. Jika Supervisor menolak permintaan cuti:
+   - Supervisor memberikan komentar atau alasan penolakan.
+   - Aplikasi mencatat keputusan penolakan dan komentar.
+   - Aplikasi mengkomunikasikan penolakan kepada karyawan yang bersangkutan.
+   - Karyawan diberitahu bahwa permintaan cuti telah ditolak.
+7. Supervisor dapat keluar dari proses peninjauan permintaan cuti.
+8. Jika terjadi masalah saat mengambil permintaan cuti, tampilkan pesan kesalahan: "Gagal mengambil permintaan cuti. Silakan coba lagi nanti."
+9. Supervisor dapat memilih opsi lain.
