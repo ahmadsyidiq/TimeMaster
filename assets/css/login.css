@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Google Sans';
+    src: url('https://fonts.gstatic.com/s/googlesans/v29/4UaGrENHsxJlGDuGo1OIlL3Owp4.woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2');;
+}
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: antiquewhite;
+}
+
+.form-login {
+    border: 2px solid #f7f2f2;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    margin: auto;
+}
+
+.form-login input {
+    font: 1.5em 'Google Sans';
+}
+.form-login label{
+    display: flex;
+    font: 1.5em 'Google Sans';
+}
+
+.form-login button{
+    font: 1.8em 'Google Sans';  
+    font-weight:500;
+}
+
+.form-login h1{
+    font: 2.5em 'Google Sans';
+    font-weight: bolder;
+}
