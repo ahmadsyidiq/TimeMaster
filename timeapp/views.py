@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Project
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 def home(request):
@@ -16,3 +18,16 @@ def projects(request):
        }]
      context = {'projects': projects}
      return render(request, 'projects/projects.html', context)
+
+
+def projectList(request):
+     project = Project.objects.all()
+     context = {'projects': project}
+     return render(request, 'projects/projects.html', context)
+
+
+def projectDetail(request, pk):
+     project = get_object_or_404(Project, id=pk)
+     project_tasks = project.task_set.all()
+     context = {'project':project, 'project_tasks':project_tasks}
+     return render(request, 'projects/project-detail.html', context)
