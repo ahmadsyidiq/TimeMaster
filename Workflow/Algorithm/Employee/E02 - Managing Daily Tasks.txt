@@ -1,0 +1,28 @@
+1. User selects "Manage Daily Tasks."
+2. Application retrieves the list of existing daily tasks.
+3. Application displays the list of tasks, including task names, descriptions, deadlines, and completion status.
+
+4. If User selects "Create a New Task":
+   - User enters task details (name, description, deadline, etc.).
+   - Application validates the entered details.
+   - If details are valid, a new task is created with the entered details and added to the daily task list.
+   - Application displays a confirmation message indicating the task has been created.
+   - If details are not valid, an error message is displayed, and the user can choose to correct the details or cancel task creation.
+
+5. If User selects "Edit an Existing Task":
+   - User selects a task to edit from the list.
+   - Application retrieves and displays the selected task's details.
+   - User modifies the details of the selected task (name, description, deadline, etc.).
+   - Application validates the modified details.
+   - If details are valid, the selected task is updated with the modified details and updated in the daily task list.
+   - Application displays a confirmation message indicating the task has been updated.
+   - If details are not valid, an error message is displayed, and the user can choose to correct the details or cancel task modification.
+
+6. If User selects "Delete Tasks":
+   - User selects tasks from the list to delete.
+   - Application removes the selected tasks from the daily task list.
+   - Application displays a confirmation message indicating the tasks have been deleted.
+
+7. Application saves changes to the daily task list.
+
+8. User can select another option if desired.

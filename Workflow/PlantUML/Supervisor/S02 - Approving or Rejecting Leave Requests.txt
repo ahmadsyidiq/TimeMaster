@@ -1,0 +1,43 @@
+@startuml
+
+title Approving or Rejecting Leave Requests
+
+start
+:Supervisor selects "Approve or Reject Leave Requests";
+
+if (Supervisor selects "Approve or Reject Leave Requests") then (yes)
+  :Application retrieves a list of leave requests submitted by employees;
+  if (Application successfully retrieves leave requests) then (yes)
+    :Supervisor can choose a leave request to review;
+    if (Supervisor selects a leave request) then (yes)
+      :Application displays detailed information about the selected leave request;
+      :Supervisor reviews leave details (such as dates, duration, and reason);
+      :Supervisor can view the employee's leave history and current balance;
+      :Supervisor can consult with relevant team members or policies;
+      if (Supervisor approves the leave request) then (yes)
+        :Supervisor provides comments or reasons for approval;
+        :Application records the approval decision and comments;
+        :Application communicates the approval to the respective employee;
+        :Employee is notified that the leave request has been approved;
+        :Leave is deducted from the employee's balance;
+      else (no)
+        :Supervisor rejects the leave request;
+        :Supervisor provides comments or reasons for rejection;
+        :Application records the rejection decision and comments;
+        :Application communicates the rejection to the respective employee;
+        :Employee is notified that the leave request has been rejected;
+      endif
+    else (no)
+      :Supervisor can exit the leave request review process;
+    endif
+  else (no)
+    :Display error message "Failed to retrieve leave requests. Please try again later.";
+    --> Supervisor selects another option;
+  endif
+else (no)
+  :Supervisor selects another option;
+endif
+
+stop
+
+@enduml
