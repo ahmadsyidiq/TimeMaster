@@ -1,2 +1,3 @@
-# TimeMaster
-Time Management Software For Employee
+user access:
+- username = admin
+- password = superadmin123
