@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from .models import Project, Task
 from django.shortcuts import get_object_or_404
 from .forms import TaskForm
-
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 
 
 # Create your views here.
@@ -59,3 +60,34 @@ def taskCreate(request):
             return redirect('tasks')
     context = {'form': form}
     return render(request, 'tasks/task-create.html', context)
+
+
+class ProjectCreateView(CreateView):
+    model = Project
+    fields= ['name', 'description']
+    template_name = 'projects/project-create-form.html'
+    success_url = reverse_lazy('projects')
+
+class ProjectUpdateView(UpdateView):
+    model = Project
+    template_name = 'projects/project-update-form.html'
+    fields = ["name","description"]
+    success_url = reverse_lazy('projects')
+
+
+class TaskUpdateView(UpdateView):
+    model = Task
+    template_name = 'tasks/task-update-form.html'
+    fields = ["title","description","project","assignee","due_date","status"]
+    success_url = reverse_lazy('tasks')
+
+
+class TaskDeleteView(DeleteView):
+    model = Task
+    template_name = 'tasks/task-confirm-delete.html'
+    success_url = reverse_lazy('tasks')
+
+class ProjectDeleteView(DeleteView):
+    model = Project
+    template_name = 'projects/project-confirm-delete.html'
+    success_url = reverse_lazy('projects')

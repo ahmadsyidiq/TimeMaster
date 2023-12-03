@@ -46,9 +46,10 @@
                                         <h6 class="mb-0"><span class="badge bg-success">{{task.project}}</span></h6>
                                     </td>
                                     <td class="border-0 align-middle">
-                                        <a href="" data-mdb-toggle="tooltip" title="Done"><i
-                                                class="fas fa-check fa-lg text-success me-3">Mark Complete /
-                                                Update</i></a>
+                                        <a href="{% url 'update-task' task.id%}" data-mdb-toggle="tooltip"
+                                            title="Done"><i class="fas fa-check fa-lg text-success me-3">Mark Complete /
+                                                Update</i>
+                                        </a>
                                     </td>
                                 </tr>
                                 {% endfor %}

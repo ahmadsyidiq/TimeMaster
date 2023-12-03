@@ -8,17 +8,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="">Projects </a>
+                    <a class="nav-link" href="{% url 'projects' %}">Projects </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Tasks</a>
+                    <a class="nav-link" href="{% url 'tasks'%}">Tasks</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-primary" href="">Create Task</a>
+                    <a class="nav-link btn btn-primary" href="{% url 'create-task'%}">Create Task</a>
                 </li>
                 <br>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-primary" href="">Create Project</a>
+                    <a class="nav-link btn btn-primary" href="{% url 'create-project'%}">Create Project</a>
                 </li>
             </ul>
         </div>
