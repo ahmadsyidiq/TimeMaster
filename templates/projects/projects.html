@@ -1,0 +1,8 @@
+{% extends '../component/base.html' %}
+{% block content %}
+    <h1>My Projects</h1>
+    {% for project in projects %}
+        <p>{{ project.id }}</p>
+        <p>{{ project.title }}</p>
+    {% endfor %}
+{% endblock %}
