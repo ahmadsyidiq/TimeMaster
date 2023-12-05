@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'timeapp',
+    'users',
     'crispy_forms',
     'crispy_bootstrap5',
 ]
@@ -73,6 +74,10 @@ TEMPLATES = [
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+LOGIN_REDIRECT_URL ='tasks'
+
+LOGIN_URL ='login'
 
 WSGI_APPLICATION = 'timemaster.wsgi.application'
 
