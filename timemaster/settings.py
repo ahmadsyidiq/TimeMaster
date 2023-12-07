@@ -79,6 +79,8 @@ LOGIN_REDIRECT_URL ='tasks'
 
 LOGIN_URL ='login'
 
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
 WSGI_APPLICATION = 'timemaster.wsgi.application'
 
 

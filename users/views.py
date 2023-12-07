@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import login, logout
+from django.contrib.auth import login, logout, views as auth_views
 from django.contrib.auth.views import LoginView
 from .models import Profile
 from .forms import ProfileForm
@@ -42,3 +42,5 @@ def update_profile(request):
         form = ProfileForm(instance=request.user.profile)
     context = {'form': form}
     return render(request, 'users/profile-update-form.html', context)
+
+
