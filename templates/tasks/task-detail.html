@@ -1,10 +1,12 @@
 {% extends '../component/base.html' %}
 {% block content %}
+{% include '../component/navbar.html' %}
 <div class="container ">
     <div class="row ">
         <div class="col-md-12 ">
             <div class="jumbotron">
-                <h4 class="display-4">{{task.title}}</h4>
+                <h4 class="display-4 fw-normal">{{task.title}}</h4>
+                <hr class="my-4">
                 <p class="lead">{{task.description}}</p>
                 <hr class="my-4">
                 <p>Date Created: {{task.date_created}}</p>

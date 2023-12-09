@@ -71,11 +71,15 @@ class ProjectUpdateView(UpdateView):
 class TaskUpdateView(UpdateView):
     model = Task
     template_name = 'tasks/task-update-form.html'
+    fields = ["status"]
+    success_url = reverse_lazy('tasks')
+
+class TaskUpdateViewStaff(UpdateView):
+    model = Task
+    template_name = 'tasks/task-update-form.html'
     fields = ["title", "description", "project",
               "assignee", "due_date", "status"]
     success_url = reverse_lazy('tasks')
-
-
 
 class TaskDeleteView(DeleteView):
     model = Task
@@ -89,10 +93,3 @@ class ProjectDeleteView(DeleteView):
     template_name = 'projects/project-confirm-delete.html'
     success_url = reverse_lazy('projects')
 
-
-@login_required()
-def joinTask(request, pk):
-    task = Task.objects.get(id=pk)
-    task.assignee = request.user
-    task.save()
-    return redirect('tasks')

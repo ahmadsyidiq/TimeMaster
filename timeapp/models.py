@@ -30,6 +30,6 @@ class Task(models.Model):
     description = models.TextField(null=True, blank=True)
     project = models.ForeignKey(Project, null=True, blank=True, on_delete=models.CASCADE)
     assignee = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
-    date_created = models.DateTimeField(null=True, blank=True)
+    date_created =  models.DateField(null=True, blank=True)
     due_date = models.DateField(null=True, blank=True)
     status = models.CharField(max_length=50, choices=STATUS_CHOICES, null=True, default=TODO)

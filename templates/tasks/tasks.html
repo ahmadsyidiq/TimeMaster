@@ -1,6 +1,6 @@
 {% extends '../component/base.html' %}
-{% load static %}
 {% block content %}
+{% include '../component/navbar.html' %}
 <section class="">
     <div class="container-fluid">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -46,10 +46,16 @@
                                         <h6 class="mb-0"><span class="badge bg-success">{{task.project}}</span></h6>
                                     </td>
                                     <td class="border-0 align-middle">
-                                        <a href="{% url 'update-task' task.id%}" data-mdb-toggle="tooltip"
+                                        {% if request.user.is_staff %}
+                                            <a href="{% url 'update-task-staff' task.id%}" data-mdb-toggle="tooltip"
                                             title="Done"><i class="fas fa-check fa-lg text-success me-3">Mark Complete /
                                                 Update</i>
-                                        </a>
+                                            </a>
+                                        {% else %}
+                                            <a href="{% url 'update-task' task.id%}" data-mdb-toggle="tooltip"
+                                                title="Done"><i class="fas fa-check fa-lg text-success me-3">Mark Complete</i>
+                                            </a>
+                                        {% endif %}
                                     </td>
                                 </tr>
                                 {% endfor %}
@@ -59,14 +65,14 @@
                 </div>
             </div>
         </div>
-        <h1> Unassigned Tasks</h1>
-        <ul class="list-group">
-            {% for task in tasks%}
+        <!-- <ul class="list-group">
+            {% for tasks in task%}
             <li class="list-group-item d-flex justify-content-between align-items-center">
-                {{task.title}} ({{task.project}})
+                {{tasks.title}} ({{tasks.project}})
                 <a href="{% url 'task-detail' task.id%}" class="btn btn-primary">More Details</a>
             </li>
+            {% endfor%}
         </ul>
-        {% endfor%}
+         -->
     </div>
     {% endblock content %}

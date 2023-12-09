@@ -8,8 +8,11 @@
               <form action=" " method="post" class="form">
                   {% csrf_token %}
                   {{ form|crispy }}
-                  <button type="submit" class="btn btn-primary">Update Task</button>
-              </form>
+                  <div class="flex">
+                    <button type="submit" class="btn btn-primary">Update Task</button>
+                    <a href="{% url 'delete-task' task.id%}" class="btn btn-danger" style="color:white">Delete Task</a>
+                </div>
+                </form>
           </div>
       </div>
   </div>
