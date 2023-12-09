@@ -1,11 +1,12 @@
 {% extends '../component/base.html' %}
 
 {% block content %}
-<div class="container  bg-light ">
-    <div class="container py-5 h-100">
+{% include '../component/navbar.html' %}
+<div class="container bg-light mt-4 ">
+    <div class="container-fluid py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-500">
             <div class="col-md-12 col-xl-10">
-                <div class="card mask-custom">
+                <div class="card mask-custom mb-2">
                     <div class="card-body p-4 ">
                         <div class="row">
                             <h5 class="border-0 align-left">
@@ -14,7 +15,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mask-custom">
+                <div class="card mask-custom mb-2">
                     <div class="card-body p-4 ">
                         <div class="row">
                             <p class="border-0 align-left">
@@ -23,7 +24,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mask-custom">
+                <div class="card mask-custom mb-2">
                     <div class="card-body p-4 ">
                         <div class="row">
                             <table class="table">
@@ -41,13 +42,24 @@
                                         <td>{{ task.assignee }}</td>
                                         <td>{{ task.due_date }}</td>
                                     </tr>
-
                                 </tbody>
                                 {% endfor%}
                             </table>
                         </div>
                     </div>
                 </div>
+                {% if request.user.is_staff %}
+                <div class="card mask-custom mb-2">
+                    <div class="card-body p-4 ">
+                        <div class="row">
+                            <div class="">
+                                <a href="{% url 'update-project' project.id%}" class="btn btn-warning" style="color:white">Update Project</a>
+                                <a href="{% url 'delete-project' project.id%}" class="btn btn-danger" style="color:white">Delete Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </div>
     </div>

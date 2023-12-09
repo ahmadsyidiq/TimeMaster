@@ -13,12 +13,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'tasks' %}">Tasks</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'create-task'%}">Create Task</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'create-project'%}">Create Project</a>
-                </li>
+                {% if request.user.is_staff %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'create-task'%}">Create Task</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'create-project'%}">Create Project</a>
+                    </li>
+                {% endif %}
             </ul>
         </div>
         <div>

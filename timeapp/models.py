@@ -8,8 +8,9 @@ class Project(models.Model):
     # deskripsi tugas
     description = models.TextField(null=True,blank=True)
     # tanggal dibuat
+    creators = models.ForeignKey(User,null=True, blank=True, on_delete=models.CASCADE)
     date_created = models.DateTimeField(auto_now_add=True,null=True,blank=True)
-
+    
     class Meta:
         ordering = ['-date_created']
 
