@@ -37,7 +37,7 @@ def update_profile(request):
         form = ProfileForm(request.POST, instance=request.user.profile)
         if form.is_valid():
             form.save()
-            return redirect('tasks')
+            return redirect('projects')
     else:
         form = ProfileForm(instance=request.user.profile)
     context = {'form': form}

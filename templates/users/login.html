@@ -2,16 +2,22 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-  <div class="container">
-      <div class="row my-5">
-          <div class="col-md-12">
-              <form action="" method="post" class="form">
-                  {% csrf_token %}
-                  {{ form|crispy }}
-                  <button type="submit" class="btn btn-primary">Login</button>
-              </form>
-          </div>
-          <p><a href="{% url 'password-reset' %}">Lost password?</a></p>
-      </div>
-  </div>
+<div class="container d-flex align-items-center justify-content-center">
+    <div class="row my-5 w-50">
+        <div class="col-xl-12 fs-6">
+            <form action="" method="post" class="form">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <div class="text-center">
+                        <a class="text-decoration-none fw-bold" href="{% url 'password-reset' %}">Lost Password?</a>
+                        or
+                        <a class="text-decoration-none fw-bold" href="{% url 'register' %}">Register</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
