@@ -2,16 +2,17 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-   <div class="container">
-       <div class="row my-5">
-           <div class="col-md-12">
-               <form action=" " method="post" class="form">
-                   {% csrf_token %}
-                   <p>Are you sure you want to delete the project "{{ object }}"?</p>
-                   {{ form|crispy }}
-                   <button type="submit" class="btn btn-danger">Confirm</button>
-               </form>
-           </div>
-       </div>
-   </div>
+{% include '../component/navbar.html' %}
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-12">
+            <form action=" " method="post" class="form">
+                {% csrf_token %}
+                <p>Are you sure you want to delete the project "{{ object }}"?</p>
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-danger">Confirm</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
